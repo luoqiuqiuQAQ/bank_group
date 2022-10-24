@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.bankgroup.mapper.FinancialMapper">
+    <resultMap id="BaseResultMap" type="Financial">
+        <id column="financialID" jdbcType="INTEGER" property="financialID"/>
+        <result column="ownerID" jdbcType="INTEGER" property="ownerID"/>
+        <result column="currencyInterestRate" jdbcType="DOUBLE" property="currencyInterestRate"/>
+        <result column="interest" jdbcType="DOUBLE" property="interest"/>
+        <result column="money" jdbcType="DOUBLE" property="money"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        financialID, ownerID, currencyInterestRate, interest, money
+    </sql>
+
+    <delete id="deleteFinancial" parameterType="Integer">
+    	delete from financial where ownerID = #{ownerID, jdbcType=INTEGER}
+    </delete>
+
+    <select id="getAllFinancial" resultType="Financial">
+        select *
+        from financial
+    </select>
+
+    <insert id="createFinancial" parameterType="Financial">
+        insert into financial
+            ( ownerID, currencyInterestRate, interest, money )
+        values
+            ( #{ownerID, jdbcType=INTEGER},
+              #{currencyInterestRate, jdbcType=DOUBLE}, #{interest, jdbcType=DOUBLE},
+              #{money, jdbcType=DOUBLE} )
+    </insert>
+
+    <select id="getFinancialByOwnerID" parameterType="Integer" resultType="Financial">
+        select *
+        from financial
+        where ownerID = #{ownerID}
+    </select>
+
+    <select id="getFinancial" parameterType="Integer" resultType="Financial">
+    	select *
+        from financial
+        where financialID = #{financialID}
+    </select>
+
+    <delete id="withdrawFinancial" parameterType="Integer">
+    	delete from financial
+        where financialID = #{financialID}
+    </delete>
+
+</mapper>

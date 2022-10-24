@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.bankgroup.mapper.SheetMapper">
+    <resultMap id="BaseResultMap" type="Sheet">
+        <id column="sheetID" jdbcType="INTEGER" property="sheetID"/>
+        <result column="ownerID" jdbcType="INTEGER" property="ownerID"/>
+        <result column="clerkID" jdbcType="INTEGER" property="clerkID"/>
+        <result column="money" jdbcType="DOUBLE" property="money"/>
+        <result column="operationDate" jdbcType="DATE" property="operationDate"/>
+        <result column="operationType" jdbcType="INTEGER" property="operationType"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        sheetID, ownerID, clerkID, money, operationDate, operationType
+    </sql>
+
+    <select id="getAllSheet" resultType="Sheet">
+        select *
+        from sheet;
+    </select>
+
+    <insert id="insertSheet" parameterType="Sheet">
+        insert into sheet(ownerID, clerkID, money, operationDate, operationType)
+        values (#{ownerID, jdbcType=INTEGER},
+                #{clerkID, jdbcType=INTEGER},
+                #{money, jdbcType=DOUBLE},
+                #{operationDate, jdbcType=DATE},
+                #{operationType, jdbcType=INTEGER})
+    </insert>
+
+    <select id="getSheetList" parameterType="Integer" resultType="Sheet">
+        select * from sheet where ownerID = #{ownerID, jdbcType=INTEGER}
+    </select>
+
+</mapper>

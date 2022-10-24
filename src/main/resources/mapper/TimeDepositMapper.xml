@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.bankgroup.mapper.TimeDepositMapper">
+    <resultMap id="BaseResultMap" type="TimeDeposit">
+        <id column="timeDepositID" jdbcType="INTEGER" property="timeDepositID"/>
+        <result column="timeDepositID" jdbcType="INTEGER" property="timeDepositID"/>
+        <result column="ownerID" jdbcType="INTEGER" property="ownerID"/>
+        <result column="deposit" jdbcType="DOUBLE" property="deposit"/>
+        <result column="registryDate" jdbcType="DATE" property="registryDate"/>
+        <result column="startDate" jdbcType="DATE" property="startDate"/>
+        <result column="expireDate" jdbcType="DATE" property="expireDate"/>
+        <result column="interestRate" jdbcType="DOUBLE" property="interestRate"/>
+        <result column="interest" jdbcType="DOUBLE" property="interest"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        timeDepositID, ownerID, deposit, registryDate, startDate, expireDate, interestRate, interest
+    </sql>
+
+    <delete id="deleteTimeDeposit" parameterType="Integer">
+    	delete from timedeposit where ownerID = #{ownerID, jdbcType=INTEGER}
+    </delete>
+
+    <select id="getAllTimeDeposit" resultType="TimeDeposit">
+    	select * from timedeposit
+    </select>
+
+    <insert id="createTimeDeposit" parameterType="TimeDeposit">
+    	insert into
+    	    timedeposit(ownerID, deposit, registryDate, startDate, expireDate, interestRate, interest)
+    	values
+    	    (#{ownerID, jdbcType=INTEGER}, #{deposit, jdbcType=DOUBLE}, #{registryDate, jdbcType=TIMESTAMP}, #{startDate, jdbcType=DATE}, #{expireDate, jdbcType=DATE}, #{interestRate, jdbcType=DOUBLE}, #{interest, jdbcType=DOUBLE})
+    </insert>
+
+    <select id="getTimeDepositByOwnerID" parameterType="Integer" resultType="TimeDeposit">
+    	select * from timedeposit where ownerID = #{ownerID, jdbcType=INTEGER}
+    </select>
+
+    <delete id="withdrawTimeDeposit" parameterType="Integer">
+        delete from timedeposit where timeDepositID = #{timeDepositID, jdbcType=INTEGER}
+    </delete>
+
+</mapper>

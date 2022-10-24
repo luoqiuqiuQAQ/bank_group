@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.bankgroup.mapper.DepositMapper">
+    <resultMap id="BaseResultMap" type="Deposit">
+        <id column="cardID" jdbcType="INTEGER" property="cardID"/>
+        <result column="ownerID" jdbcType="INTEGER" property="ownerID"/>
+        <result column="deposit" jdbcType="DOUBLE" property="deposit"/>
+        <result column="createDate" jdbcType="DATE" property="createDate"/>
+        <result column="expireDate" jdbcType="DATE" property="expireDate"/>
+        <result column="cardType" jdbcType="INTEGER" property="cardType"/>
+        <result column="lineOfCredit" jdbcType="DOUBLE" property="lineOfCredit"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cardID, ownerID,deposit, createDate, expireDate, cardType, lineOfCredit
+    </sql>
+
+    <delete id="deleteDepositCard" parameterType="Integer">
+    	delete from deposit where ownerID = #{ownerID,jdbcType=INTEGER}
+    </delete>
+
+    <select id="getAllDeposit" resultType="Deposit">
+        select *
+        from deposit
+    </select>
+
+    <insert id="createDepositCard" parameterType="Deposit">
+insert
+        into deposit(cardID, ownerID, deposit, createDate, expireDate, cardType, lineOfCredit)
+        values (#{cardID,jdbcType=INTEGER}, #{ownerID,jdbcType=INTEGER}, #{deposit,jdbcType=DOUBLE}, #{createDate,jdbcType=DATE}, #{expireDate,jdbcType=DATE}, #{cardType,jdbcType=INTEGER}, #{lineOfCredit,jdbcType=DOUBLE})
+    </insert>
+
+    <select id="getDepositCardByOwnerID" parameterType="Integer" resultType="Deposit">
+        	select *
+        	from deposit
+        	where ownerID = #{ownerID,jdbcType=INTEGER}
+    </select>
+
+    <select id="getDepositByCardID" parameterType="Integer" resultType="Deposit">
+    	select * from deposit where cardID = #{cardID,jdbcType=INTEGER}
+    </select>
+
+    <update id="updateDeposit" parameterType="Deposit">
+    	update deposit
+    	set deposit = #{deposit,jdbcType=DOUBLE}
+    	where cardID = #{cardID,jdbcType=INTEGER}
+    </update>
+
+    <delete id="closeDeposit" parameterType="Deposit">
+    	delete from deposit
+    	where cardID = #{cardID,jdbcType=INTEGER}
+    </delete>
+
+</mapper>
