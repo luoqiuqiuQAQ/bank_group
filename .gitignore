@@ -33,7 +33,7 @@ build/
 .vscode/
 
 ### User Define ###
-pom.xml
-src/main/resources/application.properties
-src/main/resources/application.yml
-src/main/resources/banner.txt
+!**/pom.xml
+!**/src/main/resources/application.properties
+!**/src/main/resources/application.yml
+!**/src/main/resources/banner.txt
