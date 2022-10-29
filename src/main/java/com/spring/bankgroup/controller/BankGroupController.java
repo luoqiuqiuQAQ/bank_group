@@ -24,7 +24,7 @@ public class BankGroupController {
     @RequestMapping(value = "/index2")
     public String index2(Model model) {
         model.addAttribute("msg", "Hello SpringMVC Annotation");
-        return "index2";
+        return "index";
     }
 
 
