@@ -30,7 +30,7 @@ public class BankGroupController {
 
     @RequestMapping(value = "/index")
     public ModelAndView index() {
-        ModelAndView modelAndView = new ModelAndView("index");
+        ModelAndView modelAndView = new ModelAndView("template_main");
         modelAndView.addObject("name", "尹浩宇");
         modelAndView.addObject("account", new Account());
         return modelAndView;

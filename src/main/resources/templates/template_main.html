@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+    <head th:fragment="head">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>测试</title>
+        <meta name="keywords" content="测试">
+        <meta name="description" content="测试描述">
+        <link href="resources/CSS/bootstrap.min.css" rel="stylesheet">
+        <link href="resources/CSS/owl.carousel.css" rel="stylesheet">
+        <link href="resources/CSS/owl.theme.css" rel="stylesheet">
+        <link href="resources/CSS/style.css" rel="stylesheet">
+        <link href="resources/CSS/media.css" rel="stylesheet">
+        <script src="resources/JS/jquery.min.js"></script>
+        <script src="resources/JS/bootstrap.min.js"></script>
+        <script src="resources/JS/owl.carousel.js"></script>
+        <script type="text/javascript" src="resources/JS/font_1287872_v94a9v0iiq.js"></script>
+        <style type="text/css">
+            .icon {
+                width: 30px;
+                height: 30px;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+                color: #999;
+            }
+
+            .btn-tel .icon {
+                width: 26px;
+                height: 26px;
+            }
+
+            .btn2:hover .icon {
+                color: #fff;
+            }
+
+            .online_q .btn2 a {
+                line-height: 1;
+            }
+        </style>
+        <style>
+            #footer_box {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background: #1d1d28;
+                overflow: hidden;
+                z-index: 9999999999999999999999;
+            }
+
+            #footer_box ul li {
+                height: 50px;
+                line-height: 20px;
+                padding-top: 5px;
+                border-left: 1px solid #333;
+            }
+
+            #footer_box ul li a {
+                color: #fff;
+                font-size: 12px;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <header th:fragment="header" id="header">
+            <div class="m_nav_bar col-lg-2 col-md-2 col-sm-2 col-xs-5">
+                <div id="logo"><br/>
+                    <h2><span>测试</span></h2>
+                    </a> </div>
+            </div>
+            <div class="slide_nav col-lg-7 col-md-7 col-sm-1">
+                <aside id="m_bnt_nav">
+                    <div class="point btn" name="1" id="mbtn"><span class="navbtn"></span></div>
+                </aside>
+                <nav id="m_nav">
+                    <ul class="m_nav_list">
+                        <li class="act"><a class="a" href="index.html" title="">
+                            <h3>首页</h3>
+                            <span><i class="j_iconfont"></i></span></a></li>
+                        <li class="title "></li>
+                        <li class="title "><a class="a" href="#n_jituan">
+                            <h3>测试</h3>
+                        </a></li>
+                        <li class="title "></li>
+                        <li class="title "><a class="a" href="product.html">
+                            <h3>测试</h3>
+                            <span><i class="j_iconfont"><img src="./resources/img/jt1.png" alt=""></i></span></a>
+                            <div class="list">
+                                <a href="#">测试</a>
+                                <a href="#">测试</a>
+                                <a href="#">测试</a>
+                                <a href="#">测试</a>
+                                <a href="#">测试</a>
+                                <a href="#">测试</a>
+                            </div>
+                        </li>
+                        <li class="title "></li>
+                        <li class="title "><a class="a" href="#">
+                            <h3>测试</h3>
+                            <span><i class="j_iconfont"><img src="./resources/img/jt1.png" alt=""></i></span></a>
+                            <div class="list">
+                                <a href="#">测试</a>
+                                <a href="#">测试</a>
+                            </div>
+                        </li>
+                        <li class="title "></li>
+                        <li class="title "><a class="a" href="#s_apply">
+                            <h3>测试</h3>
+                            <span><i class="j_iconfont"><img src="./resources/img/jt1.png" alt=""></i></span></a>
+                            <div class="list">
+                                <a href="#s_apply">测试</a>
+                            </div>
+                        </li>
+                        <li class="title "></li>
+                        <li class="title "><a class="a" href="#">
+                            <h3>测试</h3>
+                            <span><i class="j_iconfont"><img src="./resources/img/jt1.png" alt=""></i></span></a>
+                            <div class="list">
+                                123456
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <div th:fragment="placeholder">
+            <div class="zw"></div>
+            <section id="n_jituan" style=" background:#f6f6f6; padding-top:3rem">
+                <div class="container" style=" padding-top:0; padding-bottom: 0;">
+                    <h3 class="tt aos-init" aos="fade-up" aos-duration="1000" style="text-align:center;">
+                        公司介绍
+                        <span>Company Introduction</span>
+                    </h3>
+                    <div class="row">
+                        123
+                    </div>
+                </div>
+            </section>
+            <article id="n_main" style=" background:none">
+                <div class="container" style="padding-bottom:0;">
+                    <section id="n_news" style=" padding-top:3rem">
+                        3
+                    </section>
+                </div>
+            </article>
+            <section id="n_jituan" style=" background:#f6f6f6; padding-top:3rem">
+                <div class="container" style=" padding-top:0; padding-bottom: 0;">
+                    <h3 class="tt aos-init" aos="fade-up" aos-duration="1000" style="text-align:center;">
+                        公司介绍
+                        <br/><br/><br/><br/>
+                        123
+                        <span>Company Introduction</span>
+                    </h3>
+                </div>
+            </section>
+            <article id="n_main" style=" background:none">
+                <div class="container" style="padding-bottom:0;">
+                    <section id="n_news" style=" padding-top:3rem">
+                        3
+                    </section>
+                </div>
+            </article>
+        </div>
+        <footer th:fragment="footer" class="foot">
+            <div class="container">
+                <div class="foot_logo col-md-3">
+                    <a href="#"></a>
+                    <div class="ewm">
+                        <img src="./resources/img/ewm.png" alt="">
+                    </div>
+                </div>
+                <div class="foot_nav">
+                    <ul>
+                        <li><a href=""><h3>测试</h3></a>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                        </li>
+                        <li><a href=""><h3>测试</h3></a>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                        </li>
+                        <li><a href=""><h3>测试</h3></a>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                        </li>
+                        <li><a href=""><h3>测试</h3></a>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                        </li>
+                        <li><a href=""><h3>测试</h3></a>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                            <div class="list"><a href="#">测试</a></div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="foot_lianxi">
+                    <p style="line-height: normal;">
+                        <span style="font-size: 16px;">
+                            <strong>测试测试测试测试有限公司
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                &emsp;&emsp;&emsp;&emsp;&emsp;
+                            </strong>
+                        </span>
+                    </p>
+                    <p style="line-height: normal;">
+                        <span style="font-size: 11px;">Test Co.,Ltd</span>
+                    </p>
+                    <p style="line-height: normal;">
+                        <span style="font-size: 18px;"></span>
+                    </p>
+                    <p style="line-height: normal;"><br></p>
+                    <p>总机：000000000000<br>传真：00000000000<br>邮箱：0000000000000@abc.com<br>地址：吉林长春</p>
+                    <p><br></p></div>
+            </div>
+            <div class="clear"></div>
+            <div class="foot_bot"><p><a href="#" target="_blank">版权声明</a> COPYRIGHT 2000 - 2099 Rights
+                Reserved&nbsp; 测试有限公司&nbsp;&nbsp;<a href="#" target="_blank">备案号</a></p></div>
+        </footer>
+        <div th:fragment="wap" class="wap">
+            <div style=" height:50px;"></div>
+            <footer id="footer_box">
+
+
+            </footer>
+        </div>
+        <!--右侧漂浮-->
+        <aside th:fragment="aside" class="aside-nav" id="top" style="opacity: 1">
+            <div style="text-align: center; margin: 0; font: normal 14px/24px 'MicroSoft YaHei&';">
+                <div class="online_q" id="online_q">
+                    <div class="btn2 btn-02 btn-tel"><a href="JavaScript:" title="">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gongzhonghao"></use>
+                        </svg>
+                        <p>微信客服</p>
+                        <div class="open phone" style="top: 0; height: 120px; width:120px; padding: 13px;">
+                            <p><img src="" alt="图片"></p>
+                        </div>
+                    </a></div>
+                    <div class="btn2 btn-01"><a href="JavaScript:" title="">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-qq1"></use>
+                        </svg>
+                        <p>在线咨询</p>
+                    </a></div>
+                    <div class="btn2 btn-02 btn-tel"><a href="JavaScript:" title="">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-kefu"></use>
+                        </svg>
+                        <p>公司热线</p>
+                        <div class="open phone">
+                            <p>1234567890</p>
+                        </div>
+                    </a></div>
+                    <div class="btn2 btn-03"><a href="mailto:%20Test@test.com">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibiaoti--"></use>
+                        </svg>
+                        <p>发送邮件</p>
+                    </a></div>
+                    <div class="btn2 btn-top" id="gotop" style="display: block;">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-top"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <script th:fragment="script">
+            $(window).scroll(function() {
+
+                if ($(this).scrollTop()>100){
+                    $("#gotop").slideDown();
+                }else{
+                    $("#gotop").slideUp();
+                }
+            });
+            $('#gotop').click(function () {
+                $('html,body').animate({
+                    scrollTop : '0px'
+                }, 100);//返回顶部所用的时间 返回顶部也可调用goto()函数
+            });
+            $("img").attr("alt","");
+            AOS.init({
+                offset: 200,
+                duration: 600,
+                easing: 'ease-out-back',
+                delay: 100,
+                disable: 'mobile'
+            });
+            $(document).ready(function(){
+                $("video").attr("poster","/statics/video.jpg");
+            });
+        </script>
+    </body>
+</html>

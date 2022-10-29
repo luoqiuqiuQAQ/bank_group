@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Title</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
-    <p th:text="${msg}">123</p>
-</body>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+    <head><title>index2</title></head>
+    <head th:insert="~{template_main :: head}"></head>
+    <body>
+        <header th:insert="~{template_main :: header}"></header>
+        <div th:insert="~{template_main :: placeholder}"></div>
+        <footer th:insert="~{template_main :: footer}"></footer>
+        <div th:insert="~{template_main :: wap}"></div>
+        <aside th:insert="~{template_main :: aside}"></aside>
+        <script th:insert="~{template_main :: script}"></script>
+    </body>
 </html>
